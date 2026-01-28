@@ -22,6 +22,12 @@ import re
 from typing import List, Optional
 import matplotlib.pyplot as plt
 
+# --- Download NLTK data (required for Streamlit Cloud) ---
+import nltk
+nltk.download('averaged_perceptron_tagger_eng', quiet=True)
+nltk.download('punkt', quiet=True)
+nltk.download('punkt_tab', quiet=True)
+
 import phrasetopicminer as ptm
 
 # --- Load API Keys from Secrets ---
